@@ -24,6 +24,11 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* Mesh;
+
+	UPROPERTY(EditAnywhere,Category = BattleState)
+	int32 Hp;
+	UPROPERTY(EditAnywhere, Category = BattleState)
+	int32 MP;
 };
