@@ -33,4 +33,6 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* Mesh;
 
+	UPROPERTY(VisibleAnywhere)
+	class UFloatingPawnMovement* Movement;
 };
