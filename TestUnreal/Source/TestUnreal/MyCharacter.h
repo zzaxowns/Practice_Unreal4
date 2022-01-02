@@ -28,8 +28,13 @@ public:
 
 	void UpDown(float Value);
 	void LeftRight(float Value);
+	void Yaw(float Value);
 
-	//UPROPERTY(VisibleAnywhere)
-	//UStaticMeshComponent* Mesh;
+private:
+	UPROPERTY(VisibleAnywhere)
+	class USpringArmComponent* SpringArm;
+
+	UPROPERTY(VisibleAnywhere)
+	class UCameraComponent* Camera;
 
 };
