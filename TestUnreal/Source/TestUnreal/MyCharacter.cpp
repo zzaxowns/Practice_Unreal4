@@ -10,9 +10,9 @@ AMyCharacter::AMyCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 
 
-	static ConstructorHelpers::FObjectFinder<USkeletalMesh> SM(TEXT("StaticMesh'/Game/StarterContent/Props/SM_Couch.SM_Couch'"));
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> SM(TEXT("SkeletalMesh'/Game/ParagonGreystone/Characters/Heroes/Greystone/Meshes/Greystone.Greystone'"));
 	if (SM.Succeeded()) {
-		//Mesh->SetStaticMesh(SM.Object);
+		GetMesh()->SetSkeletalMesh(SM.Object);
 	}
 
 }

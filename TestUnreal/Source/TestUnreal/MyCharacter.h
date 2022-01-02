@@ -29,7 +29,7 @@ public:
 	void UpDown(float Value);
 	void LeftRight(float Value);
 
-	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* Mesh;
+	//UPROPERTY(VisibleAnywhere)
+	//UStaticMeshComponent* Mesh;
 
 };
