@@ -26,9 +26,13 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	//이동 애니메이션 바인딩 함수 
 	void UpDown(float Value);
 	void LeftRight(float Value);
 	void Yaw(float Value);
+
+	//공격 애니메이션 바인딩 함수 
+	void Attack();
 
 private:
 	UPROPERTY(VisibleAnywhere)
@@ -36,5 +40,6 @@ private:
 
 	UPROPERTY(VisibleAnywhere)
 	class UCameraComponent* Camera;
+
 
 };
