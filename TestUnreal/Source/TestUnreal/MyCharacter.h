@@ -34,6 +34,10 @@ public:
 	//공격 애니메이션 바인딩 함수 
 	void Attack();
 
+	//어택 몽타주 사용 확인 함수
+	UFUNCTION()
+	void OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted );
+
 private:
 	UPROPERTY(VisibleAnywhere)
 	class USpringArmComponent* SpringArm;
@@ -41,5 +45,9 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	class UCameraComponent* Camera;
 
+	UPROPERTY(VisibleAnywhere, Category = Pawn)
+	bool IsAttacking = false;
 
+	UPROPERTY()
+	class UMyAnimInstance* AnimInstance;
 };
