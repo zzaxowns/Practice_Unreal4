@@ -50,4 +50,7 @@ private:
 
 	UPROPERTY()
 	class UMyAnimInstance* AnimInstance;
+
+	UPROPERTY()
+	int32 AttackIndex = 0;
 };
