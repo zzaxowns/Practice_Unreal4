@@ -18,6 +18,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void PostInitializeComponents() override;
 
 public:	
 	// Called every frame
@@ -33,7 +34,7 @@ public:
 
 	//공격 애니메이션 바인딩 함수 
 	void Attack();
-
+	void AttackCheck();
 	//어택 몽타주 사용 확인 함수
 	UFUNCTION()
 	void OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted );
