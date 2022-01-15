@@ -4,6 +4,7 @@
 #include "MyAnimInstance.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/PawnMovementComponent.h"
+#include "MyCharacter.h"
 
 UMyAnimInstance::UMyAnimInstance(){
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> AM(TEXT("AnimMontage'/Game/Animations/Greystone_Skeleton_Montage.Greystone_Skeleton_Montage'"));
@@ -22,10 +23,14 @@ void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	if (IsValid(Pawn)) {
 		Speed = Pawn->GetVelocity().Size();
 
-		auto Character = Cast<ACharacter>(Pawn);
+		auto Character = Cast<AMyCharacter>(Pawn);
 
 		if (Character) {
 			IsFalling = Character->GetMovementComponent()->IsFalling();
+
+			Vertical = Character->UpDownValue;
+			Horizontal = Character->LeftRightValue;
+
 		}
 	}
 }
